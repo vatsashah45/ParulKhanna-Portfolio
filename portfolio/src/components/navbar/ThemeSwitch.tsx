@@ -4,26 +4,15 @@ import { useEffect, useState } from "react";
 import { Sun, Moon } from "lucide-react";
 
 export default function ThemeSwitch() {
-  const { theme, setTheme, resolvedTheme } = useTheme();
-
+  const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
-
-  if (!mounted) {
-    return (
-      <button
-        aria-label="Toggle theme"
-        className="p-2 rounded-full border border-current opacity-0"
-      />
-    );
-  }
-
+  if (!mounted) return <button aria-label="Toggle theme" className="opacity-0" />;
   const isDark = resolvedTheme === "dark";
-
   return (
     <button
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="p-2 rounded-full border border-current"
+      className="p-2 rounded-full border border-current hover:rotate-90 transition-transform"
       aria-label="Toggle theme"
     >
       {isDark ? <Sun size={16} /> : <Moon size={16} />}

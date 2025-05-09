@@ -6,27 +6,30 @@ import { validateString, getErrorMessage } from "@/lib/utils";
 import ContactFormEmail from "@/email/ContactFormEmail";
 
 export async function sendEmail(formData: FormData) {
-  const senderEmail = formData.get("senderEmail");
-  const message = formData.get("message");
+  const senderValue = formData.get("senderEmail");
+  const messageValue = formData.get("message");
 
-  if (!validateString(senderEmail, 500))
-    return { error: "Invalid sender email" };
-  if (!validateString(message, 5000))
-    return { error: "Invalid message" };
+  if (!validateString(senderValue, 500) || !validateString(messageValue, 5000)) {
+    return { error: "Validation failed" };
+  }
+
+  const senderEmail = senderValue as string;
+  const message = messageValue as string;
 
   try {
-    const data = await resend.emails.send({
-      from: "Portfolio Contact <noreply@resend.dev>",
-      to: "you@example.com",
-      subject: "New message from portfolio",
-      replyTo: senderEmail as string,
+    await resend.emails.send({
+      from: "Portfolio Site <noreply@resend.dev>",
+      to: "your@email.com",
+      subject: "New portfolio inquiry",
+      replyTo: senderEmail,
       react: React.createElement(ContactFormEmail, {
-        senderEmail: senderEmail as string,
-        message: message as string,
+        senderEmail,
+        message,
       }),
     });
-    return { data };
   } catch (error) {
     return { error: getErrorMessage(error) };
   }
+
+  return { data: "ok" };
 }
