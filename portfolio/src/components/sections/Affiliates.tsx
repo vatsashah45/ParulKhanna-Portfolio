@@ -1,15 +1,18 @@
-"use client";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+'use client';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import { motion } from 'framer-motion';
+
 export default function Affiliates() {
   const links = [
-    { img: "/brands/spotify.png", url: "https://spotify.com", title: "Spotify" },
-    { img: "/brands/sephora.png", url: "https://sephora.com", title: "Sephora" },
-    { img: "/brands/airbnb.png", url: "https://airbnb.com", title: "Airbnb" },
+    { img: '/brands/neofinancial.png', url: 'https://neofinancial.com', title: 'Neo Financial' },
+    { img: '/brands/wealthsimple.png', url: 'https://wealthsimple.com', title: 'Wealthsimple' },
+    { img: '/brands/taxes.png', url: 'https://taxes.com', title: 'Taxes' },
   ];
+
   return (
-    <section id="affiliates" className="py-24">
-      <h2 className="font-display text-3xl font-bold mb-10">Affiliate Links</h2>
+    <section id="affiliates" className="py-32">
+      <h2 className="font-display text-3xl font-bold mb-10 text-center">Brands you should check out</h2>
       <Swiper
         spaceBetween={24}
         slidesPerView={1.4}
@@ -17,10 +20,23 @@ export default function Affiliates() {
       >
         {links.map(({ img, url, title }) => (
           <SwiperSlide key={title}>
-            <a href={url} target="_blank" rel="noopener" className="block rounded-2xl overflow-hidden shadow-lg">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={img} alt={title} className="w-full h-40 object-cover" />
-            </a>
+            <motion.a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block p-4"
+              whileHover={{ scale: 1.05, rotateX: 1.5, rotateY: 1.5 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+            >
+              <div className="overflow-hidden rounded-2xl shadow-lg bg-white dark:bg-zinc-800">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={img}
+                  alt={title}
+                  className="w-full h-40 object-contain p-6 grayscale hover:grayscale-0 transition-all"
+                />
+              </div>
+            </motion.a>
           </SwiperSlide>
         ))}
       </Swiper>

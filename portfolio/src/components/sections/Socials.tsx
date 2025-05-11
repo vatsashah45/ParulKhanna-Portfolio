@@ -1,22 +1,28 @@
+// Enhanced Socials Section UI (src/components/sections/Socials.tsx)
 "use client";
 import { Youtube, Instagram, Twitter } from "lucide-react";
 import { motion } from "framer-motion";
+
+const socials = [
+  { icon: Youtube, label: "YouTube", value: "850K", color: "bg-red-500" },
+  { icon: Instagram, label: "Instagram", value: "920K", color: "bg-pink-500" },
+  { icon: Twitter, label: "X", value: "110K", color: "bg-blue-500" },
+];
+
 export default function Socials() {
-  // In production you'd fetch metrics via Server Component with revalidate.
-  const stats = [
-    { icon: Youtube, label: "YouTube", value: "850K" },
-    { icon: Instagram, label: "Instagram", value: "920K" },
-    { icon: Twitter, label: "X", value: "110K" },
-  ];
   return (
-    <section id="socials" className="py-24">
-      <h2 className="font-display text-3xl font-bold mb-10">Social Reach</h2>
-      <div className="grid sm:grid-cols-3 gap-6">
-        {stats.map(({ icon: Icon, label, value }) => (
-          <motion.div key={label} whileHover={{ y: -4 }} className="rounded-xl border border-white/20 dark:border-white/10 bg-white/80 dark:bg-white/5 p-6 text-center backdrop-blur">
-            <Icon className="mx-auto mb-3" />
-            <p className="text-2xl font-semibold text-brand dark:text-brand-dark">{value}</p>
-            <p className="text-sm uppercase tracking-wide">{label}</p>
+    <section id="socials" className="py-32">
+      <h2 className="font-display text-4xl font-bold mb-12 text-center">Socials</h2>
+      <div className="grid sm:grid-cols-3 gap-8">
+        {socials.map(({ icon: Icon, label, value, color }) => (
+          <motion.div
+            key={label}
+            whileHover={{ scale: 1.05 }}
+            className={`rounded-xl ${color} text-white p-6 text-center shadow-md transition-transform`}
+          >
+            <Icon className="mx-auto mb-4 w-8 h-8" />
+            <p className="text-3xl font-bold">{value}</p>
+            <p className="text-sm tracking-wider uppercase opacity-80">{label}</p>
           </motion.div>
         ))}
       </div>

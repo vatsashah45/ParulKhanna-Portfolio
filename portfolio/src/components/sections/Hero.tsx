@@ -1,22 +1,59 @@
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
 export default function Hero() {
   return (
-    <section className="relative isolate overflow-hidden bg-gradient-to-br from-indigo-500 via-purple-500 to-fuchsia-500 text-white dark:from-indigo-700 dark:via-purple-700 dark:to-fuchsia-700">
-      <div className="mx-auto max-w-4xl px-4 py-32 grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <h1 className="font-display text-4xl sm:text-5xl font-bold leading-tight">
-            Hi, I'm <span className="text-yellow-300">[Name]</span>
+    <section className="relative isolate overflow-hidden bg-[url('/hero-bg.jpg')] bg-cover bg-center text-white dark:bg-black dark:text-white">
+      <div className="absolute inset-0 bg-black/40 dark:bg-black/60" />
+      <div className="relative z-10 mx-auto max-w-4xl px-4 py-32 grid md:grid-cols-2 gap-10 items-center text-center md:text-left">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h1 className="font-display text-5xl md:text-6xl font-extrabold leading-tight">
+            Hey, I'm <span className="text-yellow-300">Parul</span>
           </h1>
-          <p className="mt-4 text-lg max-w-prose">
-            Lifestyle & travel creator with <strong>1M+</strong> followers across platforms. I help brands tell stories that stick.
+          <p className="mt-4 text-lg max-w-prose mx-auto md:mx-0">
+            Cybersecurity enthusiast and influencer with <strong>1M+</strong> followers. I help students succeed in Canada.
           </p>
-          <a href="#contact" className="inline-block mt-8 rounded bg-yellow-300 px-6 py-3 font-semibold text-black hover:bg-yellow-200">
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 mt-8 rounded bg-yellow-300 px-6 py-3 font-semibold text-black hover:bg-yellow-200 transition-transform hover:scale-105"
+          >
             Work with me
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
           </a>
-        </div>
-        <div className="justify-self-center">
-          <Image src="/headshot.jpg" alt="Influencer headshot" width={300} height={300} className="rounded-full shadow-xl w-60 h-60 object-cover" />
-        </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+          className="justify-self-center"
+        >
+          <Image
+            src="/headshot.jpg"
+            alt="Influencer headshot"
+            width={300}
+            height={300}
+            className="rounded-full shadow-xl w-60 h-60 object-cover border-4 border-white"
+          />
+        </motion.div>
       </div>
     </section>
   );
