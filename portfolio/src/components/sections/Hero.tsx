@@ -4,8 +4,10 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative isolate overflow-hidden bg-[url('/hero-bg.jpg')] bg-cover bg-center text-white dark:bg-black dark:text-white">
-      <div className="absolute inset-0 bg-black/40 dark:bg-black/60" />
+    <section className="relative isolate overflow-hidden text-gray-800 dark:text-white">
+      {/* Soft gradient overlay for contrast – optional */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white/60 to-transparent dark:from-black/60 dark:to-transparent" />
+
       <div className="relative z-10 mx-auto max-w-4xl px-4 py-32 grid md:grid-cols-2 gap-10 items-center text-center md:text-left">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -13,14 +15,14 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
         >
           <h1 className="font-display text-5xl md:text-6xl font-extrabold leading-tight">
-            Hey, I'm <span className="text-yellow-300">Parul</span>
+            Hey, I'm <span className="text-purple-300">Parul</span>
           </h1>
           <p className="mt-4 text-lg max-w-prose mx-auto md:mx-0">
             Cybersecurity enthusiast and influencer with <strong>1M+</strong> followers. I help students succeed in Canada.
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 mt-8 rounded bg-yellow-300 px-6 py-3 font-semibold text-black hover:bg-yellow-200 transition-transform hover:scale-105"
+            className="inline-flex items-center gap-2 mt-8 rounded bg-purple-300 px-6 py-3 font-semibold text-black hover:bg-yellow-200 transition-transform hover:scale-105"
           >
             Work with me
             <svg

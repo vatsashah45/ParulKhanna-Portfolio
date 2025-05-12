@@ -1,5 +1,8 @@
 "use client";
+
+import { useEffect, useState } from "react";
 import ThemeSwitch from "./ThemeSwitch";
+
 const links = [
   { href: "#about", label: "About" },
   { href: "#socials", label: "Socials" },
@@ -7,21 +10,35 @@ const links = [
   { href: "#affiliates", label: "Affiliates" },
   { href: "#contact", label: "Contact" },
 ];
+
 export default function NavBar() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
+
   return (
-    <header className="fixed inset-x-0 top-0 z-50 backdrop-blur-lg bg-white/70 dark:bg-black/60 border-b border-white/20 dark:border-white/10">
-      <nav className="mx-auto flex max-w-4xl items-center justify-between px-4 py-3">
-        <span className="font-display text-lg font-semibold text-brand dark:text-brand-dark">Influencer</span>
-        <ul className="hidden gap-6 md:flex">
+    <header className="fixed top-4 inset-x-0 z-50 flex justify-center pointer-events-none">
+      <nav
+        className="pointer-events-auto backdrop-blur-xl bg-white/80 dark:bg-zinc-900/80 border border-white/30 dark:border-white/10 
+                   shadow-xl rounded-full px-4 py-2 w-full max-w-3xl mx-4 flex items-center justify-between"
+      >
+        <ul className="flex flex-1 justify-between items-center gap-2">
           {links.map(({ href, label }) => (
-            <li key={href}>
-              <a href={href} className="hover:text-brand dark:hover:text-brand-dark transition-colors">
+            <li key={href} className="flex-1 text-center">
+              <a
+                href={href}
+                className="block px-4 py-2 rounded-full text-base font-semibold font-display transition-all transform
+             hover:scale-105 hover:text-brand dark:hover:text-brand-dark"
+              >
                 {label}
               </a>
             </li>
           ))}
         </ul>
-        <ThemeSwitch />
+
+        <div className="ml-4 shrink-0">
+          <ThemeSwitch />
+        </div>
       </nav>
     </header>
   );
