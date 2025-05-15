@@ -1,21 +1,29 @@
 'use client';
+
 import { useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { CalendarClock } from 'lucide-react';
 
 export default function Appointments() {
   const [open, setOpen] = useState(false);
 
   return (
-    <section id="appointments" className="py-32">
-      <h2 className="font-display text-3xl font-bold mb-6 text-center">Book an Appointment</h2>
-      <div className="text-center">
-        <button
+    <section id="appointments" className="py-16 md:py-20 scroll-mt-24">
+      <div className="max-w-xl mx-auto text-center space-y-4">
+        <h2 className="font-display text-3xl md:text-4xl font-bold">Book an Appointment</h2>
+        <p className="text-gray-600 dark:text-gray-300 text-base md:text-lg">
+          Have questions or want to collaborate? Let's connect over a quick call.
+        </p>
+
+        <motion.button
           onClick={() => setOpen(true)}
-          className="rounded bg-brand px-6 py-3 text-white font-semibold hover:bg-brand/90 transition-all"
+          whileHover={{ scale: 1.05 }}
+          className="inline-flex items-center gap-2 rounded-full bg-purple-300 px-6 py-3 text-black font-semibold hover:bg-purple-400 transition-all shadow-lg"
         >
+          <CalendarClock className="w-5 h-5" />
           Schedule a Call
-        </button>
+        </motion.button>
       </div>
 
       <AnimatePresence>
@@ -34,18 +42,14 @@ export default function Appointments() {
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
-              className="bg-white dark:bg-zinc-900 rounded-xl p-6 max-w-lg w-full shadow-xl"
+              className="bg-white dark:bg-zinc-900 rounded-xl p-6 w-full max-w-3xl sm:p-8 shadow-2xl"
             >
-              <Dialog.Title className="text-xl font-semibold mb-4">Let’s talk!</Dialog.Title>
-              <p className="mb-4 text-sm text-gray-500 dark:text-gray-300">
-                Drop me a line at <a className="underline" href="mailto:example@email.com">example@email.com</a> or pick a time below.
-              </p>
               <iframe
-                src="https://calendly.com/your-link?hide_event_type_details=1&hide_gdpr_banner=1"
-                className="w-full h-96 rounded-lg border"
+                src="https://calendly.com/parultv/appointment"
+                className="w-full h-96 rounded-lg border border-gray-200 dark:border-gray-700"
               />
               <button
-                className="mt-6 rounded bg-brand px-4 py-2 text-white hover:bg-brand/90"
+                className="mt-6 block mx-auto rounded-full bg-purple-300 px-5 py-2 text-black font-medium hover:bg-purple-400 transition"
                 onClick={() => setOpen(false)}
               >
                 Close

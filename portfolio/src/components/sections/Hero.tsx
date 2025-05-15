@@ -8,7 +8,7 @@ export default function Hero() {
       {/* Soft gradient overlay for contrast – optional */}
       <div className="absolute inset-0 bg-gradient-to-br from-white/60 to-transparent dark:from-black/60 dark:to-transparent" />
 
-      <div className="relative z-10 mx-auto max-w-4xl px-4 py-32 grid md:grid-cols-2 gap-10 items-center text-center md:text-left">
+      <div className="relative z-10 mx-auto max-w-4xl px-4 py-24 md:py-28 grid md:grid-cols-2 gap-10 items-center text-center md:text-left">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -22,7 +22,7 @@ export default function Hero() {
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 mt-8 rounded bg-purple-300 px-6 py-3 font-semibold text-black hover:bg-yellow-200 transition-transform hover:scale-105"
+            className="inline-flex items-center gap-2 mt-8 rounded bg-purple-300 px-6 py-3 font-semibold text-black hover:bg-purple-400 transition-transform hover:scale-105"
           >
             Work with me
             <svg

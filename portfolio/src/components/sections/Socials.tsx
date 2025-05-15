@@ -18,6 +18,13 @@ const socials = [
     url: "https://www.instagram.com/connectparul",
   },
   {
+    icon: Linkedin,
+    label: "LinkedIn",
+    value: "27K",
+    color: "bg-[#0077B5]",
+    url: "https://www.linkedin.com/in/connectparulkhanna",
+  },
+  {
     icon: Twitter,
     label: "X",
     value: "2K",
@@ -31,18 +38,11 @@ const socials = [
     color: "bg-[#1877F2]",
     url: "https://www.facebook.com/connectparul",
   },
-  {
-    icon: Linkedin,
-    label: "LinkedIn",
-    value: "27K",
-    color: "bg-[#0077B5]",
-    url: "https://www.linkedin.com/in/connectparulkhanna",
-  },
 ];
 
 export default function Socials() {
   return (
-    <section id="socials" className="py-32">
+    <section id="socials" className="py-16 md:py-20 scroll-mt-24">
       <h2 className="font-display text-4xl font-bold mb-12 text-center">Socials</h2>
       <div className="grid sm:grid-cols-3 gap-8">
       {socials.map(({ icon: Icon, label, value, color, url }) => (

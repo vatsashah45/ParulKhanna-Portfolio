@@ -11,7 +11,7 @@ export default function Affiliates() {
   ];
 
   return (
-    <section id="affiliates" className="py-32">
+    <section id="affiliates" className="py-16 md:py-20 scroll-mt-24">
       <h2 className="font-display text-3xl font-bold mb-10 text-center">Brands you should check out</h2>
       <Swiper
         spaceBetween={24}
