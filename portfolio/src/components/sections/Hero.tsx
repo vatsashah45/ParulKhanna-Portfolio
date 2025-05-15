@@ -17,7 +17,7 @@ export default function Hero() {
           <h1 className="font-display text-5xl md:text-6xl font-extrabold leading-tight">
             Hey, I'm <span className="text-purple-300">Parul</span>
           </h1>
-          <p className="mt-4 text-lg max-w-prose mx-auto md:mx-0">
+          <p className="font-sans mt-4 text-lg max-w-prose mx-auto md:mx-0">
             Cybersecurity enthusiast and influencer with <strong>1M+</strong> followers. I help students succeed in Canada.
           </p>
           <a
@@ -49,8 +49,8 @@ export default function Hero() {
           className="justify-self-center"
         >
           <Image
-            src="/headshot.jpg"
-            alt="Influencer headshot"
+            src="/Headshot.jpeg"
+            alt="Headshot"
             width={300}
             height={300}
             className="rounded-full shadow-xl w-60 h-60 object-cover border-4 border-white"

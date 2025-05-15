@@ -5,14 +5,14 @@ const config: Config = {
   darkMode: ['class', '.themed-body'], // apply dark mode class to body
   content: [
     './src/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}', // optional, if you're using /app
+    './app/**/*.{ts,tsx}',
   ],
   theme: {
     extend: {
       colors: {
         brand: {
-          DEFAULT: '#6366f1',        // indigo-500
-          dark: '#818cf8',          // indigo-400
+          DEFAULT: '#6366f1',
+          dark: '#818cf8',
         },
       },
       fontFamily: {

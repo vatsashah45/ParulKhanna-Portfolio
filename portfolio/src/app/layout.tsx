@@ -13,7 +13,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className="min-h-screen text-gray-800 dark:text-gray-100 selection:bg-brand/30
+        className="min-h-screen font-sans text-gray-800 dark:text-gray-100 selection:bg-brand/30
              bg-gradient-to-br from-white to-indigo-100 dark:from-gray-900 dark:to-indigo-950 transition-colors"
       >
         <Providers>
