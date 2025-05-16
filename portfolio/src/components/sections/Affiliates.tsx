@@ -5,9 +5,9 @@ import { motion } from 'framer-motion';
 
 export default function Affiliates() {
   const links = [
-    { img: '/brands/neofinancial.png', url: 'https://neofinancial.com', title: 'Neo Financial' },
+    { img: '/Headshot.jpeg', url: 'https://neofinancial.com', title: 'Neo Financial' },
     { img: '/brands/wealthsimple.png', url: 'https://wealthsimple.com', title: 'Wealthsimple' },
-    { img: '/brands/taxes.png', url: 'https://taxes.com', title: 'Taxes' },
+    { img: '/Headshot.jpeg', url: 'https://taxes.com', title: 'Taxes' },
   ];
 
   return (

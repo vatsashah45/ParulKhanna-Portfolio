@@ -8,6 +8,7 @@ const links = [
   { href: "#socials", label: "Socials" },
   { href: "#appointments", label: "Appointments" },
   { href: "#affiliates", label: "Affiliates" },
+  { href: "#room-rental", label: "Accomodation" },
   { href: "#contact", label: "Contact" },
 ];
 
