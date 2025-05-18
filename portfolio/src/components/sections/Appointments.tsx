@@ -13,7 +13,7 @@ export default function Appointments() {
       <div className="max-w-xl mx-auto text-center space-y-4">
         <h2 className="font-display text-3xl md:text-4xl font-bold">Book an Appointment</h2>
         <p className="text-gray-600 dark:text-gray-300 text-base md:text-lg">
-          Have questions or want to collaborate? Let's connect over a quick call.
+          Have questions or want to collaborate? Lets connect over a quick call.
         </p>
 
         <motion.button

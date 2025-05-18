@@ -15,7 +15,7 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
         >
           <h1 className="font-display text-5xl md:text-6xl font-extrabold leading-tight">
-            Hey, I'm <span className="text-purple-300">Parul</span>
+            Hey, I am <span className="text-purple-300">Parul</span>
           </h1>
           <p className="font-sans mt-4 text-lg max-w-prose mx-auto md:mx-0">
             Cybersecurity enthusiast and influencer with <strong>1M+</strong> followers. I help students succeed in Canada.

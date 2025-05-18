@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { CalendarClock, ImageIcon } from "lucide-react";
 
 export default function RoomRental() {
   return (
