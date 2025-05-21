@@ -1,8 +1,7 @@
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
-  //darkMode: 'class', // ✅ critical line!
-  darkMode: ['class', '.themed-body'], // apply dark mode class to body
+  darkMode: 'class',
   content: [
     './src/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',

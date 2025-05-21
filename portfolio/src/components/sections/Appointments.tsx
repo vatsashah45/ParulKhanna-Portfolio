@@ -45,7 +45,7 @@ export default function Appointments() {
               className="bg-white dark:bg-zinc-900 rounded-xl p-6 w-full max-w-3xl sm:p-8 shadow-2xl"
             >
               <iframe
-                src="https://calendly.com/parultv/appointment"
+                src="https://calendly.com/parultv"
                 className="w-full h-96 rounded-lg border border-gray-200 dark:border-gray-700"
               />
               <button
