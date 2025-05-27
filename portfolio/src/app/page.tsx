@@ -5,6 +5,8 @@ import Appointments from "@/components/sections/Appointments";
 import Affiliates from "@/components/sections/Affiliates";
 import RoomRental from "@/components/sections/RoomRental";
 import ContactSection from "@/components/sections/ContactSection";
+import Immigration from "@/components/sections/Immigration";
+import Study from "@/components/sections/Study";
 
 export default function HomePage() {
   return (
@@ -15,6 +17,8 @@ export default function HomePage() {
       <Appointments />
       <Affiliates />
       <RoomRental />
+      <Immigration />
+      <Study />
       <ContactSection />
     </>
   );
