@@ -1,63 +1,81 @@
 'use client';
 
-import { useState } from 'react';
-import { Dialog } from '@headlessui/react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { CalendarClock } from 'lucide-react';
+import { motion } from 'framer-motion';
+
+const sessions = [
+  {
+    title: 'Job Coaching',
+    length: '60 min',
+    description:
+      'Deep-dive on career direction, resume tweaks, networking tactics, and a personalized action plan.',
+    url: 'https://calendly.com/parultv/work-in-canada-session-with-parul?',
+  },
+  {
+    title: 'Study-in-Canada Strategy',
+    length: '60 min',
+    description:
+      'Step-by-step guidance on programs, budgeting, visas, and settling in—tailored to your background.',
+    url: 'https://calendly.com/parultv/studying-in-canada-session?',
+  },
+  {
+    title: 'Resume & LinkedIn Audit',
+    length: '45 min',
+    description:
+      'Live walkthrough of your résumé and profile with instant edits and tips to stand out to Canadian recruiters.',
+    url: 'https://calendly.com/parultv/resume-linkedin-audit?',
+  },
+  {
+    title: 'Mock Interview + Scorecard',
+    length: '30 min',
+    description:
+      'A realistic practice interview, detailed feedback, and a scorecard so you know exactly where to improve.',
+    url: 'https://calendly.com/parultv/resume-linkedin-audit-clone?',
+  },
+  {
+    title: 'Speed Call',
+    length: '15 min',
+    description:
+      'One quick but critical question? Get a rapid-fire answer and next steps without the wait.',
+    url: 'https://calendly.com/parultv/mock-interview-score-clone?',
+  },
+];
 
 export default function Appointments() {
-  const [open, setOpen] = useState(false);
-
   return (
     <section id="appointments" className="py-16 md:py-20 scroll-mt-24">
       <div className="max-w-xl mx-auto text-center space-y-4">
-        <h2 className="font-display text-3xl md:text-4xl font-bold">Book an Appointment</h2>
+        <h2 className="font-display text-3xl md:text-4xl font-bold">Book a 1-on-1 Consultation</h2>
         <p className="text-gray-600 dark:text-gray-300 text-base md:text-lg">
-          Have questions or want to collaborate? Lets connect over a quick call.
+          Welcome to my booking hub—pick the session that fits your challenge and let’s tackle your 🇨🇦 goals together.
         </p>
-
-        <motion.button
-          onClick={() => setOpen(true)}
-          whileHover={{ scale: 1.05 }}
-          className="inline-flex items-center gap-2 rounded-full bg-purple-300 px-6 py-3 text-black font-semibold hover:bg-purple-400 transition-all shadow-lg"
-        >
-          <CalendarClock className="w-5 h-5" />
-          Schedule a Call
-        </motion.button>
       </div>
 
-      <AnimatePresence>
-        {open && (
-          <Dialog
-            as={motion.div}
-            open={open}
-            onClose={() => setOpen(false)}
-            className="fixed inset-0 z-50 grid place-items-center bg-black/60 p-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+      <div className="mt-12 max-w-5xl mx-auto grid gap-6 md:grid-cols-2 px-4">
+        {sessions.map(({ title, length, description, url }) => (
+          <a
+            key={title}
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
           >
-            <Dialog.Panel
-              as={motion.div}
-              initial={{ scale: 0.95, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.95, opacity: 0 }}
-              className="bg-white dark:bg-zinc-900 rounded-xl p-6 w-full max-w-3xl sm:p-8 shadow-2xl"
+            <motion.div
+              whileHover={{ scale: 1.03 }}
+              className="bg-white dark:bg-zinc-800 rounded-xl shadow-md p-6 border border-black/10 dark:border-white/10 hover:shadow-lg transition-shadow"
             >
-              <iframe
-                src="https://calendly.com/parultv"
-                className="w-full h-96 rounded-lg border border-gray-200 dark:border-gray-700"
-              />
-              <button
-                className="mt-6 block mx-auto rounded-full bg-purple-300 px-5 py-2 text-black font-medium hover:bg-purple-400 transition"
-                onClick={() => setOpen(false)}
-              >
-                Close
-              </button>
-            </Dialog.Panel>
-          </Dialog>
-        )}
-      </AnimatePresence>
+              <h3 className="text-xl font-bold font-display text-gray-900 dark:text-white">
+                {title}
+                <span className="ml-2 text-sm font-medium text-gray-500 dark:text-gray-400">
+                  ({length})
+                </span>
+              </h3>
+              <p className="mt-2 text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                {description}
+              </p>
+            </motion.div>
+          </a>
+        ))}
+      </div>
     </section>
   );
 }

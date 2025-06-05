@@ -28,8 +28,7 @@ export default function Immigration() {
             Immigrate to Canada
           </h2>
           <p className="text-gray-700 dark:text-gray-300 text-base md:text-lg leading-relaxed">
-            Start your journey to a better future in Canada. Whether youre applying for PR, work permits, or
-            exploring express entry, I’ll connect you with verified immigration consultants that can help.
+            Ready to turn “I wish” into “I’m landing”? Explore every pathway—student permits, Express Entry, family sponsorships, you name it—send us your details on immigration@parul.tv
           </p>
 
           <motion.a

@@ -12,22 +12,10 @@ export default function Affiliates() {
       description: 'Get Canadas best Credit Card with me',
     },
     {
-      img: '/Headshot.jpeg',
-      url: 'https://www.parul.tv/immigration',
-      title: 'Immigrate to Canada',
-      description: 'Immigration Services',
-    },
-    {
-      img: '/Headshot.jpeg',
+      img: '/unnamed.png',
       url: 'https://my.wealthsimple.com/app/public/trade-referral-signup?code=M0WDYW',
       title: 'Wealthsimple',
       description: 'Get up to $6000 on Wealthsimple for free.',
-    },
-    {
-      img: '/Headshot.jpeg',
-      url: 'https://calendly.com/parultv/appointment',
-      title: 'Study in Canada',
-      description: 'Unlock Your Path to Studying in Canada with Parul.',
     },
   ];
 
@@ -51,7 +39,6 @@ export default function Affiliates() {
               transition={{ type: 'spring', stiffness: 300 }}
             >
               <div className="overflow-hidden rounded-2xl shadow-lg bg-white dark:bg-zinc-800 p-6 flex flex-col h-full">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={img}
                   alt={title}

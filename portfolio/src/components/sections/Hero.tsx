@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <section className="relative isolate overflow-hidden text-gray-800 dark:text-white">
-      {/* Soft gradient overlay for contrast – optional */}
       <div className="absolute inset-0 bg-gradient-to-br from-white/60 to-transparent dark:from-black/60 dark:to-transparent" />
 
       <div className="relative z-10 mx-auto max-w-4xl px-4 py-24 md:py-28 grid md:grid-cols-2 gap-10 items-center text-center md:text-left">
@@ -21,10 +20,12 @@ export default function Hero() {
             Cybersecurity enthusiast and influencer with <strong>1M+</strong> followers. I help students succeed in Canada.
           </p>
           <a
-            href="#contact"
+            href="https://calendly.com/parultv"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 mt-8 rounded bg-purple-300 px-6 py-3 font-semibold text-black hover:bg-purple-400 transition-transform hover:scale-105"
           >
-            Work with me
+            Schedule a call with me
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-4 w-4"

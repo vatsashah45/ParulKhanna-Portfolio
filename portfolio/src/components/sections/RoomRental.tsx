@@ -13,24 +13,22 @@ export default function RoomRental() {
             Room for Rent in <br className="hidden sm:block" /> Montreal
           </h2>
           <p className="text-gray-700 dark:text-gray-300 text-base md:text-lg leading-relaxed">
-            Finding accommodation in Canada is one of the first things any newcomer will want to tick off their to-do list.
-            Depending on your circumstances, you may wish to find temporary accommodation first while you search for apartments or houses.
-            From your first night to your first lease and beyond, this service is for you.
+            Stay with ParulTV and trade the usual student digs for a true launch-pad: a private, queen-sized room in a bright home just ten minutes from Terminus Saint-Jean-sur-Richelieu and half an hour to downtown Montréal. Your rent bundles everything—high-speed Wi-Fi, utilities, laundry, stocked kitchen, and even a Day-1 home-cooked Indian dinner—plus backyard patio and pool access when the weather’s kind. Best of all, you’ll share the space with Parul himself, turning casual coffee chats into on-the-spot mentorship about visas, jobs, and settling into Canada. Arrive, plug in, and start living—not just lodging.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
             <motion.a
-              href="https://forms.gle/your-google-form"
+              href="https://forms.gle/4m7JrjJPQv9jKbKX8"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               className="flex items-center gap-2 rounded-full bg-purple-300 px-5 py-2.5 text-black font-semibold hover:bg-purple-400 transition-all shadow-md"
             >
-              <span>Check Availability</span>
+              <span>Inquiry button</span>
             </motion.a>
 
             <motion.a
-              href="/photos"
+              href="https://drive.google.com/drive/folders/18pxXOMQ-kefTowpCZLJR4Oj8E7tLDCeL"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
