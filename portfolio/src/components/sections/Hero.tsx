@@ -17,7 +17,7 @@ export default function Hero() {
             Hey, I am <span className="text-purple-300">Parul</span>
           </h1>
           <p className="font-sans mt-4 text-lg max-w-prose mx-auto md:mx-0">
-            Cybersecurity enthusiast and influencer with <strong>1M+</strong> followers. I help students succeed in Canada.
+            Cybersecurity enthusiast and influencer with <strong>400K+</strong> followers. I help students succeed in Canada.
           </p>
           <a
             href="https://calendly.com/parultv"

@@ -15,10 +15,10 @@ export default function HomePage() {
       <About />
       <Socials />
       <Appointments />
-      <Affiliates />
+      {/* <Affiliates /> */}
       <RoomRental />
-      <Immigration />
-      <Study />
+      {/* <Immigration /> */}
+      {/* <Study /> */}
       <ContactSection />
     </>
   );

@@ -24,20 +24,20 @@ const socials = [
     color: "bg-[#0077B5]",
     url: "https://www.linkedin.com/in/connectparulkhanna",
   },
-  {
-    icon: Twitter,
-    label: "X",
-    value: "2K",
-    color: "bg-black",
-    url: "https://x.com/parulhacks",
-  },
-  {
-    icon: Facebook,
-    label: "Facebook",
-    value: "6K",
-    color: "bg-[#1877F2]",
-    url: "https://www.facebook.com/connectparul",
-  },
+  // {
+  //   icon: Twitter,
+  //   label: "X",
+  //   value: "2K",
+  //   color: "bg-black",
+  //   url: "https://x.com/parulhacks",
+  // },
+  // {
+  //   icon: Facebook,
+  //   label: "Facebook",
+  //   value: "6K",
+  //   color: "bg-[#1877F2]",
+  //   url: "https://www.facebook.com/connectparul",
+  // },
 ];
 
 export default function Socials() {

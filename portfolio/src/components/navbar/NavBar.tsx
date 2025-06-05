@@ -8,10 +8,10 @@ const links = [
   { href: "#about", label: "About" },
   { href: "#socials", label: "Socials" },
   { href: "#appointments", label: "Appointments" },
-  { href: "#affiliates", label: "Affiliates" },
+  // { href: "#affiliates", label: "Affiliates" },
   { href: "#room-rental", label: "Accomodation" },
-  { href: "#immigrate", label: "Immigrate" },
-  { href: "#study", label: "Study" },
+  // { href: "#immigrate", label: "Immigrate" },
+  // { href: "#study", label: "Study" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -31,7 +31,6 @@ export default function NavBar() {
 
   return (
     <>
-      {/* Floating controls for small screens */}
       <div className="fixed top-4 left-4 z-50 md:hidden">
         <button
           onClick={() => setMenuOpen(!menuOpen)}
@@ -46,10 +45,9 @@ export default function NavBar() {
         <ThemeSwitch />
       </div>
 
-      {/* Full NavBar for desktop */}
       <header className="hidden md:flex fixed top-4 inset-x-0 z-50 justify-center pointer-events-none">
         <nav
-          className={`pointer-events-auto border backdrop-blur-xl shadow-xl rounded-full px-4 py-2 w-full max-w-5xl mx-4 flex items-center justify-between transition-colors duration-300 ${
+          className={`pointer-events-auto border backdrop-blur-xl shadow-xl rounded-full px-4 py-2 w-full max-w-3xl mx-4 flex items-center justify-between transition-colors duration-300 ${
             scrolled
               ? "bg-white/60 dark:bg-zinc-900/60 border-white/20 dark:border-white/5"
               : "bg-white/80 dark:bg-zinc-900/80 border-white/30 dark:border-white/10"
@@ -73,7 +71,6 @@ export default function NavBar() {
         </nav>
       </header>
 
-      {/* Mobile menu dropdown */}
       {menuOpen && (
         <div className="fixed top-[4.5rem] left-4 right-4 z-40 rounded-xl bg-white dark:bg-zinc-900 shadow-xl md:hidden">
           <ul className="flex flex-col py-4">
