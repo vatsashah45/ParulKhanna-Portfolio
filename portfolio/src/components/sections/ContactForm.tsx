@@ -20,7 +20,9 @@ export default function ContactForm() {
         name="senderEmail"
         required
         placeholder="Your email"
-        className="w-full rounded-md bg-white/10 backdrop-blur border border-white/20 px-4 py-3 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-purple-400 transition"
+        className="w-full rounded-md bg-gray-100 dark:bg-white/10 border border-gray-300 dark:border-white/20 px-4 py-3
+                   text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-white/60 focus:outline-none
+                   focus:ring-2 focus:ring-purple-400 transition"
       />
 
       <textarea
@@ -28,7 +30,9 @@ export default function ContactForm() {
         required
         placeholder="Your message"
         rows={6}
-        className="w-full rounded-md bg-white/10 backdrop-blur border border-white/20 px-4 py-3 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-purple-400 transition"
+        className="w-full rounded-md bg-gray-100 dark:bg-white/10 border border-gray-300 dark:border-white/20 px-4 py-3
+                   text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-white/60 focus:outline-none
+                   focus:ring-2 focus:ring-purple-400 transition"
       />
 
       <button
