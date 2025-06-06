@@ -11,10 +11,9 @@ export const metadata = {
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className='scroll-smooth'>
       <body
-        className="min-h-screen font-sans text-gray-800 dark:text-gray-100 selection:bg-brand/30
-             bg-gradient-to-br from-white to-indigo-100 dark:from-gray-900 dark:to-indigo-950 transition-colors"
+        className="min-h-screen font-sans text-gray-800 dark:text-gray-100 selection:bg-brand/30 bg-gradient-to-br from-cyan-50 to-indigo-100 dark:from-gray-950 dark:to-blue-950 transition-colors"
       >
         <Providers>
           <NavBar />

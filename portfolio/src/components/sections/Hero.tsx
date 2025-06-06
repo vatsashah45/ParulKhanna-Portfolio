@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <section className="relative isolate overflow-hidden text-gray-800 dark:text-white">
-      <div className="absolute inset-0 bg-gradient-to-br from-white/60 to-transparent dark:from-black/60 dark:to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-cyan-50/60 to-transparent dark:from-gray-950/60 dark:to-transparent" />
 
       <div className="relative z-10 mx-auto max-w-4xl px-4 py-24 md:py-28 grid md:grid-cols-2 gap-10 items-center text-center md:text-left">
         <motion.div
@@ -19,11 +19,18 @@ export default function Hero() {
           <p className="font-sans mt-4 text-lg max-w-prose mx-auto md:mx-0">
             Cybersecurity enthusiast and influencer with <strong>400K+</strong> followers. I help students succeed in Canada.
           </p>
-          <a
+          <motion.a
             href="https://calendly.com/parultv"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 mt-8 rounded bg-purple-300 px-6 py-3 font-semibold text-black hover:bg-purple-400 transition-transform hover:scale-105"
+            className="inline-flex items-center gap-2 mt-8 rounded bg-purple-300 px-6 py-3 font-semibold text-black shadow-lg"
+            whileHover={{
+              scale: 1.08,
+              rotate: -1,
+              boxShadow: "0px 8px 24px rgba(0, 0, 0, 0.2)",
+            }}
+            whileTap={{ scale: 0.95, rotate: 0 }}
+            transition={{ type: "spring", stiffness: 300 }}
           >
             Schedule a call with me
             <svg
@@ -40,7 +47,7 @@ export default function Hero() {
                 d="M17 8l4 4m0 0l-4 4m4-4H3"
               />
             </svg>
-          </a>
+          </motion.a>
         </motion.div>
 
         <motion.div

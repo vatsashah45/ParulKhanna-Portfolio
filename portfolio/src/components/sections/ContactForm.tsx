@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { sendEmail } from "@/actions/sendEmail";
+import { motion } from "framer-motion";
 
 export default function ContactForm() {
   const sendEmailAction = sendEmail as unknown as (f: FormData) => Promise<void>;
@@ -35,12 +36,18 @@ export default function ContactForm() {
                    focus:ring-2 focus:ring-purple-400 transition"
       />
 
-      <button
+      <motion.button
         type="submit"
+        whileHover={{
+          y: -4,
+          opacity: 0.9,
+        }}
+        whileTap={{ scale: 0.96 }}
+        transition={{ type: "spring", stiffness: 200 }}
         className="block mx-auto rounded-md bg-purple-300 px-6 py-3 text-black font-semibold hover:bg-purple-400 transition-all"
       >
         Send
-      </button>
+      </motion.button>
 
       {status && <p className="text-sm text-purple-300 mt-2">{status}</p>}
     </form>
