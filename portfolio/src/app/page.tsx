@@ -7,6 +7,7 @@ import RoomRental from "@/components/sections/RoomRental";
 import ContactSection from "@/components/sections/ContactSection";
 // import Immigration from "@/components/sections/Immigration";
 // import Study from "@/components/sections/Study";
+import Sponsorship from "@/components/sections/Sponsorship";
 
 export default function HomePage() {
   return (
@@ -19,6 +20,7 @@ export default function HomePage() {
       <RoomRental />
       {/* <Immigration /> */}
       {/* <Study /> */}
+      <Sponsorship />
       <ContactSection />
     </>
   );

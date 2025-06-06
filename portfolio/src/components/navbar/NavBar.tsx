@@ -12,6 +12,7 @@ const links = [
   { href: "#room-rental", label: "Accomodation" },
   // { href: "#immigrate", label: "Immigrate" },
   // { href: "#study", label: "Study" },
+  { href: "#sponsorship", label: "Sponsorship" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -47,7 +48,7 @@ export default function NavBar() {
 
       <header className="hidden md:flex fixed top-4 inset-x-0 z-50 justify-center pointer-events-none">
         <nav
-          className={`pointer-events-auto border backdrop-blur-xl shadow-xl rounded-full px-4 py-2 w-full max-w-3xl mx-4 flex items-center justify-between transition-colors duration-300 ${
+          className={`pointer-events-auto border backdrop-blur-xl shadow-xl rounded-full px-4 py-2 w-full max-w-4xl mx-4 flex items-center justify-between transition-colors duration-300 ${
             scrolled
               ? "bg-white/60 dark:bg-zinc-900/60 border-white/20 dark:border-white/5"
               : "bg-white/80 dark:bg-zinc-900/80 border-white/30 dark:border-white/10"
