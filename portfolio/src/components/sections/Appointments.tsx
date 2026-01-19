@@ -17,27 +17,27 @@ const sessions = [
       'Step-by-step guidance on programs, budgeting, visas, and settling in—tailored to your background.',
     url: 'https://calendly.com/parultv/studying-in-canada-session?',
   },
-  {
-    title: 'Resume & LinkedIn Audit',
-    length: '45 min',
-    description:
-      'Live walkthrough of your résumé and profile with instant edits and tips to stand out to Canadian recruiters.',
-    url: 'https://calendly.com/parultv/resume-linkedin-audit?',
-  },
-  {
-    title: 'Mock Interview + Scorecard',
-    length: '30 min',
-    description:
-      'A realistic practice interview, detailed feedback, and a scorecard so you know exactly where to improve.',
-    url: 'https://calendly.com/parultv/resume-linkedin-audit-clone?',
-  },
-  {
-    title: 'Speed Call',
-    length: '15 min',
-    description:
-      'One quick but critical question? Get a rapid-fire answer and next steps without the wait.',
-    url: 'https://calendly.com/parultv/mock-interview-score-clone?',
-  },
+  // {
+  //   title: 'Resume & LinkedIn Audit',
+  //   length: '45 min',
+  //   description:
+  //     'Live walkthrough of your résumé and profile with instant edits and tips to stand out to Canadian recruiters.',
+  //   url: 'https://calendly.com/parultv/resume-linkedin-audit?',
+  // },
+  // {
+  //   title: 'Mock Interview + Scorecard',
+  //   length: '30 min',
+  //   description:
+  //     'A realistic practice interview, detailed feedback, and a scorecard so you know exactly where to improve.',
+  //   url: 'https://calendly.com/parultv/resume-linkedin-audit-clone?',
+  // },
+  // {
+  //   title: 'Speed Call',
+  //   length: '15 min',
+  //   description:
+  //     'One quick but critical question? Get a rapid-fire answer and next steps without the wait.',
+  //   url: 'https://calendly.com/parultv/mock-interview-score-clone?',
+  // },
 ];
 
 export default function Appointments() {
